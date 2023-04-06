@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease-in-out 0.15s, border-width 0.15s ease-out;
+      }
+
+      .red {
+        border: 2px red solid;
+      }
+
+    .section {
+      display: none;
+    }
+    
+    .tab {
+      cursor: pointer;
+      margin: 0 10px;
+      text-decoration: underline;
+      text-decoration-color: #383333;
+      text-underline-offset: 5px;
+      display: inline-block;
+      transition: text-decoration-color 0.6s ease;
+    }
+
+    .tab:hover {
+      text-decoration-color:rgb(100 116 139);
+    }
+    
+    .active, .tab:hover  {
+      text-decoration-color: rgb(249 250 251);
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 0.75s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+}
+    

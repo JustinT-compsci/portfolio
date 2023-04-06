@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="Layer_1" fill="#E8E8E8" data-name="Layer 1" viewBox="0 0 79.154 78.143" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:grid x="0" y="0" width="44.442" height="36.21"></bx:grid>
+  </defs>
+  <rect x="1.96" width="75" height="75" rx="15" ry="15" style="fill-opacity: 1; fill: rgba(255, 255, 255, 0); stroke: rgb(232, 232, 232); stroke-width: 2px;" y="1.531"></rect>
+  <rect id="_Transparent_Rectangle" style="fill:none;" width="32" height="32" transform="matrix(1, 0, 0, 1, 80.910755, 59.359033)"></rect>
+  <g transform="matrix(0.200517, 0, 0, 0.200517, 9.620531, 10.166642)" style=""></g>
+  <rect x="14.412" y="14.318" width="37.072" height="37.072" style="stroke: rgb(232, 232, 232); fill: rgba(216, 216, 216, 0); stroke-width: 1.5px;" transform="matrix(-0.707107, 0.707107, -0.707107, -0.707107, 85.70433, 39.100403)"></rect>
+  <path d="M 49.945 38.598 L 38.945 30.06 L 27.945 38.598 L 27.945 35.119 L 38.945 26.579 L 49.945 35.117 L 49.945 38.598 Z M 47.195 38.288 L 47.195 46.539 L 41.695 46.539 L 41.695 41.039 L 36.195 41.039 L 36.195 46.539 L 30.695 46.539 L 30.695 38.289 L 38.945 32.102 L 47.195 38.288 Z"></path>
+</svg>
