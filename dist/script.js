@@ -15,7 +15,9 @@ for (var i = 0; i < coll.length; i++) {
       window.addEventListener("resize", function () {
         var contents = document.getElementsByClassName("content");
         for (var j = 0; j < contents.length; j++) {
-          contents[j].style.maxHeight = contents[j].scrollHeight + "px";
+          if (contents[j].style.maxHeight) { // check if maxHeight is already set
+            contents[j].style.maxHeight = contents[j].scrollHeight + "px";
+          }
         }
       });
     }
