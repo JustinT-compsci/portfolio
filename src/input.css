@@ -6,16 +6,24 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-@layer utilities {
-      .content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease-in-out 0.15s, border-width 0.15s ease-out;
-      }
+.collapsible::after {
+  content: "\276E";
+  transform: rotate(-90deg);
+  transition: transform 0.15s ease-in-out;
+}
+.active::after {
+  content: "\276E";
+  transform: rotate(90deg);
+  transition: transform 0.15s ease-in-out;
+}
 
-      .red {
-        border: 2px red solid;
-      }
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease 0.15s;
+}
+
+@layer utilities {
 
     .section {
       display: none;
@@ -35,7 +43,7 @@ body::-webkit-scrollbar {
       text-decoration-color:rgb(100 116 139);
     }
     
-    .active, .tab:hover  {
+    .active2, .tab:hover  {
       text-decoration-color: rgb(249 250 251);
     }
     
