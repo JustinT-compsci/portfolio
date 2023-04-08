@@ -28,7 +28,11 @@ body::-webkit-scrollbar {
     .section {
       display: none;
     }
-    
+
+    /* .red {
+      border: red solid 1px;
+    }
+     */
     .tab {
       cursor: pointer;
       margin: 0 10px;
