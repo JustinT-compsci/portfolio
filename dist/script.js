@@ -33,6 +33,14 @@ next.addEventListener("click", function () {
     content.style.maxHeight <= content.scrollHeight + "px"
   ) {
     content.style.maxHeight = content.scrollHeight + "px";
+    window.addEventListener("resize", function () {
+      var contents = document.getElementsByClassName("content");
+      for (var j = 0; j < contents.length; j++) {
+        if (contents[j].style.maxHeight) { // check if maxHeight is already set
+          contents[j].style.maxHeight = contents[j].scrollHeight + "px";
+        }
+      }
+    });
   }
 });
 
