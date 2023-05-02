@@ -23,6 +23,7 @@ body::-webkit-scrollbar {
   transition: max-height 0.3s ease 0.15s;
 }
 
+
 @layer utilities {
 
     .section {
@@ -31,8 +32,8 @@ body::-webkit-scrollbar {
 
     /* .red {
       border: red solid 1px;
-    }
-     */
+    } */
+
     .tab {
       cursor: pointer;
       margin: 0 10px;

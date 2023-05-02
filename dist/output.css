@@ -548,6 +548,10 @@ video {
   top: 1.25rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -832,11 +836,7 @@ video {
 
 .bg-body {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 17 / var(--tw-bg-opacity));
-}
-
-.bg-emerald-400\/10 {
-  background-color: rgb(52 211 153 / 0.1);
+  background-color: rgb(0 0 16 / var(--tw-bg-opacity));
 }
 
 .bg-slate-500\/10 {
@@ -874,6 +874,18 @@ video {
 .from-blue-400\/10 {
   --tw-gradient-from: rgb(96 165 250 / 0.1);
   --tw-gradient-to: rgb(96 165 250 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-emerald-400\/10 {
+  --tw-gradient-from: rgb(52 211 153 / 0.1);
+  --tw-gradient-to: rgb(52 211 153 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-emerald-400\/5 {
+  --tw-gradient-from: rgb(52 211 153 / 0.05);
+  --tw-gradient-to: rgb(52 211 153 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -918,6 +930,10 @@ video {
 
 .to-blue-400\/20 {
   --tw-gradient-to: rgb(96 165 250 / 0.2);
+}
+
+.to-emerald-400\/20 {
+  --tw-gradient-to: rgb(52 211 153 / 0.2);
 }
 
 .to-transparent {
@@ -1075,14 +1091,14 @@ video {
   color: rgb(52 211 153 / var(--tw-text-opacity));
 }
 
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-50 {
-  --tw-text-opacity: 1;
-  color: rgb(249 250 251 / var(--tw-text-opacity));
 }
 
 .text-slate-200\/60 {
@@ -1151,6 +1167,10 @@ video {
   --tw-ring-color: rgb(52 211 153 / 0.2);
 }
 
+.ring-emerald-400\/25 {
+  --tw-ring-color: rgb(52 211 153 / 0.25);
+}
+
 .ring-slate-300\/20 {
   --tw-ring-color: rgb(203 213 225 / 0.2);
 }
@@ -1191,8 +1211,7 @@ video {
 
 /* .red {
       border: red solid 1px;
-    }
-     */
+    } */
 
 .tab {
   cursor: pointer;
@@ -1254,10 +1273,6 @@ body::-webkit-scrollbar {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease 0.15s;
-}
-
-.hover\:bg-emerald-400\/10:hover {
-  background-color: rgb(52 211 153 / 0.1);
 }
 
 .hover\:bg-white\/5:hover {
@@ -1329,9 +1344,9 @@ body::-webkit-scrollbar {
     margin-right: 15%;
   }
 
-  .md\:my-\[6\%\] {
-    margin-top: 6%;
-    margin-bottom: 6%;
+  .md\:my-\[14\%\] {
+    margin-top: 14%;
+    margin-bottom: 14%;
   }
 
   .md\:grid-cols-2 {
@@ -1345,9 +1360,9 @@ body::-webkit-scrollbar {
     margin-right: 22%;
   }
 
-  .lg\:my-\[6\%\] {
-    margin-top: 6%;
-    margin-bottom: 6%;
+  .lg\:my-\[7\%\] {
+    margin-top: 7%;
+    margin-bottom: 7%;
   }
 }
     
