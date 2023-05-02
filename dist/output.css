@@ -573,9 +573,9 @@ video {
   margin-right: 2.5rem;
 }
 
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+.mx-7 {
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
 }
 
 .my-1 {
@@ -586,11 +586,6 @@ video {
 .my-\[22\%\] {
   margin-top: 22%;
   margin-bottom: 22%;
-}
-
-.mx-7 {
-  margin-left: 1.75rem;
-  margin-right: 1.75rem;
 }
 
 .mb-1 {
@@ -633,12 +628,12 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-3 {
