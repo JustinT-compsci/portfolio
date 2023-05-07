@@ -636,8 +636,8 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
+.mt-11 {
+  margin-top: 2.75rem;
 }
 
 .mt-2 {
@@ -1258,6 +1258,18 @@ video {
   }
 }
 
+@keyframes fadeInUp-contact {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes button {
   0% {
     color: rgb(161 161 170);
@@ -1273,6 +1285,16 @@ video {
   }
 }
 
+@keyframes underline-color {
+  0% {
+    background-size: 100% 0.1em, 0 0.15em;
+  }
+
+  100% {
+    background-size: 0 0.1em, 100% 0.15em;
+  }
+}
+
 .\[mask-image\:radial-gradient\(farthest-side_at_top\2c white\2c transparent\)\] {
   -webkit-mask-image: radial-gradient(farthest-side at top,white,transparent);
           mask-image: radial-gradient(farthest-side at top,white,transparent);
@@ -1282,11 +1304,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Fading animation */
+/* fading animation */
 
 .fade {
-  animation-name: fade;
-  animation-duration: 0.75s;
+  animation: fade 0.75s;
 }
 
 .collapsible::after {
@@ -1301,7 +1322,7 @@ body::-webkit-scrollbar {
   transition: transform 0.18s ease-in-out;
 }
 
-/* section animations */
+/* about section animations */
 
 .content {
   max-height: 0;
@@ -1319,34 +1340,48 @@ body::-webkit-scrollbar {
   animation: fadeInUp .75s ease backwards 0.35s;
 }
 
+.intro-underline {
+  background:
+    none,
+    linear-gradient(to right, rgb(96 165 250), rgb(167 139 250));
+  background-size: 100% 0.1em, 0 0.1em;
+  padding-bottom: 1.5px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  animation: underline-color .88s ease forwards 1.05s;
+}
+
 .link {
   animation: fadeInUp .75s ease backwards 0.65s;
 }
 
 .recent {
   animation: fadeInUp .70s ease backwards 0.80s;
-  z-index: 3;
+}
+
+.contact {
+  animation: fadeInUp-contact .75s ease backwards 0.15s;
 }
 
 /* contact buttons */
 
 .button1 {
-  animation: button .75s ease-in-out 0.35s;
+  animation: button .75s ease-in-out 0.50s;
   z-index: 3;
 }
 
 .button2 {
-  animation: button .75s ease-in-out 0.55s;
-  z-index: 3;
-}
-
-.button3 {
   animation: button .75s ease-in-out 0.75s;
   z-index: 3;
 }
 
+.button3 {
+  animation: button .75s ease-in-out 0.95s;
+  z-index: 3;
+}
+
 .button4 {
-  animation: button .85s ease-in-out 0.95s;
+  animation: button .88s ease-in-out 1.05s;
   z-index: 3;
 }
 
@@ -1365,7 +1400,8 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
-.box:before, .box:after {
+.box:before,
+.box:after {
   content: "";
   display: block;
   position: absolute;
@@ -1466,6 +1502,10 @@ body::-webkit-scrollbar {
     margin-bottom: 14%;
   }
 
+  .md\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1480,5 +1520,9 @@ body::-webkit-scrollbar {
   .lg\:my-\[7\%\] {
     margin-top: 7%;
     margin-bottom: 7%;
+  }
+
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
   }
 }

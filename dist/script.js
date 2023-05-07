@@ -83,6 +83,9 @@ const hello = document.querySelector(".hello");
 const ani = document.querySelector(".ani");
 const link = document.querySelector(".link");
 const recent = document.querySelector(".recent");
+const contact = document.querySelector(".contact");
+
+
 
 
 intro.addEventListener("animationend", () => {
@@ -99,6 +102,9 @@ link.addEventListener("animationend", () => {
 });
 recent.addEventListener("animationend", () => {
   recent.classList.remove("recent");
+});
+contact.addEventListener("animationend", () => {
+  contact.classList.remove("contact");
 });
 
 console.clear();

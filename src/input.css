@@ -6,10 +6,9 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Fading animation */
+/* fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 0.75s;
+  animation: fade 0.75s;
 }
 
 .collapsible::after {
@@ -23,12 +22,14 @@ body::-webkit-scrollbar {
   transform: rotate(90deg);
   transition: transform 0.18s ease-in-out;
 }
-/* section animations */
+
+/* about section animations */
 .content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.35s ease-in-out 0.15s;
 }
+
 /* section 1 animations */
 .hello {
   animation: fadeInUp .75s ease backwards 0.15s;
@@ -38,30 +39,49 @@ body::-webkit-scrollbar {
   animation: fadeInUp .75s ease backwards 0.35s;
 }
 
+.intro-underline {
+  background:
+    none,
+    linear-gradient(to right, rgb(96 165 250), rgb(167 139 250));
+  background-size: 100% 0.1em, 0 0.1em;
+  padding-bottom: 1.5px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  animation: underline-color .88s ease forwards 1.05s;
+
+}
+
 .link {
   animation: fadeInUp .75s ease backwards 0.65s;
 }
 
 .recent {
   animation: fadeInUp .70s ease backwards 0.80s;
-  z-index: 3;
 }
+
+.contact {
+  animation: fadeInUp-contact .75s ease backwards 0.15s;
+}
+
 /* contact buttons */
 .button1 {
-  animation: button .75s ease-in-out 0.35s;
+  animation: button .75s ease-in-out 0.50s;
   z-index: 3;
 }
+
 .button2 {
-  animation: button .75s ease-in-out 0.55s;
+  animation: button .75s ease-in-out 0.75s;
   z-index: 3;
 
 }
+
 .button3 {
-  animation: button .75s ease-in-out 0.75s;
+  animation: button .75s ease-in-out 0.95s;
   z-index: 3;
 }
+
 .button4 {
-  animation: button .85s ease-in-out 0.95s;
+  animation: button .88s ease-in-out 1.05s;
   z-index: 3;
 }
 
@@ -78,7 +98,9 @@ body::-webkit-scrollbar {
   --y-px: calc(var(--y) * 1px);
   overflow: hidden;
 }
-.box:before, .box:after {
+
+.box:before,
+.box:after {
   content: "";
   display: block;
   position: absolute;
@@ -88,17 +110,21 @@ body::-webkit-scrollbar {
   width: 100%;
   background: radial-gradient(850px circle at var(--x-px) var(--y-px), rgba(36, 80, 124, 0.35), transparent 35%);
 }
+
 .box:before {
   z-index: -1;
 }
+
 .box:after {
   opacity: 0;
   z-index: 2;
   transition: opacity 0.7s ease;
 }
+
 .box:hover:after {
   opacity: 1;
 }
+
 /*  */
 
 @layer utilities {
@@ -152,6 +178,18 @@ body::-webkit-scrollbar {
     }
   }
 
+  @keyframes fadeInUp-contact {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @keyframes button {
     0% {
       color: rgb(161 161 170);
@@ -160,11 +198,21 @@ body::-webkit-scrollbar {
     50% {
       color: #ffff;
       background-color: rgba(255, 255, 255, 0.05);
-      
+
     }
 
     100% {
       color: rgb(161 161 170);
+    }
+  }
+
+  @keyframes underline-color {
+    0% {
+      background-size: 100% 0.1em, 0 0.15em;
+    }
+
+    100% {
+      background-size: 0 0.1em, 100% 0.15em;
     }
   }
 }
