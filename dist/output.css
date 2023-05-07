@@ -548,6 +548,10 @@ video {
   top: 1.25rem;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -602,6 +606,10 @@ video {
 
 .mr-1 {
   margin-right: 0.25rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
 }
 
 .mr-auto {
@@ -1220,18 +1228,12 @@ video {
 }
 
 .tab:hover {
-  text-decoration-color:rgb(100 116 139);
+  text-decoration-color: rgb(100 116 139);
 }
 
-.active2, .tab:hover  {
+.active2,
+  .tab:hover {
   text-decoration-color: rgb(249 250 251);
-}
-
-/* Fading animation */
-
-.fade {
-  animation-name: fade;
-  animation-duration: 0.75s;
 }
 
 @keyframes fade {
@@ -1244,6 +1246,33 @@ video {
   }
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes button {
+  0% {
+    color: rgb(161 161 170);
+  }
+
+  50% {
+    color: #ffff;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  100% {
+    color: rgb(161 161 170);
+  }
+}
+
 .\[mask-image\:radial-gradient\(farthest-side_at_top\2c white\2c transparent\)\] {
   -webkit-mask-image: radial-gradient(farthest-side at top,white,transparent);
           mask-image: radial-gradient(farthest-side at top,white,transparent);
@@ -1253,23 +1282,115 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* Fading animation */
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.75s;
+}
+
 .collapsible::after {
   content: "\276E";
   transform: rotate(-90deg);
-  transition: transform 0.15s ease-in-out;
+  transition: transform 0.18s ease-in-out;
 }
 
 .active::after {
   content: "\276E";
   transform: rotate(90deg);
-  transition: transform 0.15s ease-in-out;
+  transition: transform 0.18s ease-in-out;
 }
+
+/* section animations */
 
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease 0.15s;
+  transition: max-height 0.35s ease-in-out 0.15s;
 }
+
+/* section 1 animations */
+
+.hello {
+  animation: fadeInUp .75s ease backwards 0.15s;
+}
+
+.intro {
+  animation: fadeInUp .75s ease backwards 0.35s;
+}
+
+.link {
+  animation: fadeInUp .75s ease backwards 0.65s;
+}
+
+.recent {
+  animation: fadeInUp .70s ease backwards 0.80s;
+  z-index: 3;
+}
+
+/* contact buttons */
+
+.button1 {
+  animation: button .75s ease-in-out 0.35s;
+  z-index: 3;
+}
+
+.button2 {
+  animation: button .75s ease-in-out 0.55s;
+  z-index: 3;
+}
+
+.button3 {
+  animation: button .75s ease-in-out 0.75s;
+  z-index: 3;
+}
+
+.button4 {
+  animation: button .85s ease-in-out 0.95s;
+  z-index: 3;
+}
+
+/*  */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.box {
+  --x-px: calc(var(--x) * 1px);
+  --y-px: calc(var(--y) * 1px);
+  overflow: hidden;
+}
+
+.box:before, .box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(850px circle at var(--x-px) var(--y-px), rgba(36, 80, 124, 0.35), transparent 35%);
+}
+
+.box:before {
+  z-index: -1;
+}
+
+.box:after {
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.7s ease;
+}
+
+.box:hover:after {
+  opacity: 1;
+}
+
+/*  */
 
 .hover\:bg-white\/5:hover {
   background-color: rgb(255 255 255 / 0.05);
@@ -1361,4 +1482,3 @@ body::-webkit-scrollbar {
     margin-bottom: 7%;
   }
 }
-    

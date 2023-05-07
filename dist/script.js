@@ -77,3 +77,38 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   tabs[slideIndex - 1].className += " active2";
 }
+// Animate only once
+const intro = document.querySelector(".intro");
+const hello = document.querySelector(".hello");
+const ani = document.querySelector(".ani");
+const link = document.querySelector(".link");
+const recent = document.querySelector(".recent");
+
+
+intro.addEventListener("animationend", () => {
+  intro.classList.remove("intro");
+});
+hello.addEventListener("animationend", () => {
+  hello.classList.remove("hello");
+});
+ani.addEventListener("animationend", () => {
+  ani.classList.remove("hello");
+});
+link.addEventListener("animationend", () => {
+  link.classList.remove("link");
+});
+recent.addEventListener("animationend", () => {
+  recent.classList.remove("recent");
+});
+
+console.clear();
+const featuresEl = document.querySelector(".box-wrap");
+const featureEls = document.querySelectorAll(".box");
+
+featuresEl.addEventListener("pointermove", (ev) => {
+  featureEls.forEach((featureEl) => {
+    const rect = featureEl.getBoundingClientRect();
+    featureEl.style.setProperty("--x", ev.clientX - rect.left);
+    featureEl.style.setProperty("--y", ev.clientY - rect.top);
+  });
+});
